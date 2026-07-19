@@ -1,0 +1,20 @@
+{
+  "name": "debrief-skill",
+  "version": "1.0.0",
+  "description": "A single-file Claude Code skill that reviews how a session went — not the code it produced. Catches mistimed questions, regressions, and wasted tool calls.",
+  "author": {
+    "name": "Gal Margalit (Wavez)"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/Wavez/debrief-skill",
+  "keywords": [
+    "claude-skill",
+    "claude-code",
+    "debrief",
+    "retrospective",
+    "process-improvement",
+    "model-invoked",
+    "postmortem",
+    "session-review"
+  ]
+}
