@@ -4,8 +4,8 @@
 [![Version](https://img.shields.io/github/v/release/Wavez/debrief-skill)](https://github.com/Wavez/debrief-skill/releases)
 [![License: MIT](https://img.shields.io/github/license/Wavez/debrief-skill)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
 
-**Reviews how the session went, not what it built.** A single-file Claude Code skill for
-session retrospectives, with no scripts or dependencies — it catches mistimed questions,
+**Reviews how the session went, not just what it produced.** A single-file Claude Code skill for
+session retrospectives, with no scripts or dependencies - it catches mistimed questions,
 repeated mistakes, and the wasted tool calls and tokens that a code review can't see.
 
 ## Install
@@ -75,14 +75,13 @@ constraints.**
 
 - **Use** when wrapping up a Claude Code session, or when asked for a debrief, a session
   retrospective, or a post-mortem.
-- **Not for** reviewing the code or artifacts a session produced — other tools handle that.
+- **Not for** reviewing the code or artifacts a session produced - other tools handle that.
 
 ## Why not an existing retrospective skill?
 
 | Alternative | What it does differently |
 |---|---|
 | [`bitwarden/ai-plugins` `claude-retrospective`](https://github.com/bitwarden/ai-plugins/tree/main/plugins/claude-retrospective) | Heavier: pulls git history and examines existing code-quality metrics via companion shell scripts from Bitwarden's plugin ecosystem. A full session audit, not a lightweight process check. |
-| [`accidentalrebel/claude-skill-session-retrospective`](https://github.com/accidentalrebel/claude-skill-session-retrospective) | Narrative: produces a "lessons learned, blog-post-ready" writeup, not a structured critique of the collaboration. |
 | [`TerenceBristol/claude-improve`](https://github.com/TerenceBristol/claude-improve) | A continuous, multi-run configuration-improvement system tracking acceptance rates across sessions over time — an ongoing machine, not a single end-of-session retrospective. |
 | [`session-report`](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/session-report) (official Anthropic plugin) | Narrative call-outs on token waste and cost anomalies from usage data — not a judgment of the collaboration or process itself. |
 
