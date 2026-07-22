@@ -15,15 +15,17 @@ repeated mistakes, and the wasted tool calls and tokens that a code review can't
 /plugin install debrief-skill@debrief-skill
 ```
 
-Run it at the end of a session so Claude stops repeating the same process mistakes and gets
-better at working with you over time.
-
-Read-only and self-contained: it never edits files or saves memory unless you explicitly
-approve it.
-
 ## Auto updating
 
 Run `/plugin` → **Marketplaces** → select `debrief-skill` → **Enable auto-update**.
+
+## Usage
+
+Run `/debrief` at the end of a session so Claude stops repeating the same process mistakes and
+gets better at working with you over time.
+
+Read-only and self-contained: it never edits files or saves memory unless you explicitly
+approve it.
 
 ## What it checks
 
