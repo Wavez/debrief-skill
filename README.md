@@ -15,12 +15,6 @@ repeated mistakes, and the wasted tool calls and tokens that a code review can't
 /plugin install debrief-skill@debrief-skill
 ```
 
-Or copy it in manually:
-
-```bash
-cp -r skills/debrief ~/.claude/skills/debrief
-```
-
 Run it at the end of a session so Claude stops repeating the same process mistakes and gets
 better at working with you over time.
 
