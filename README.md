@@ -27,6 +27,13 @@ better at working with you over time.
 Read-only and self-contained: it never edits files or saves memory unless you explicitly
 approve it.
 
+## Updating
+
+Auto-update is off by default for third-party marketplaces, so new releases won't reach you
+automatically unless you opt in: run `/plugin`, select **Marketplaces**, choose `debrief-skill`,
+then **Enable auto-update**. Otherwise, re-run the install command above to pick up the latest
+release manually.
+
 ## What it checks
 
 - **Efficiency and token usage** — redundant tool calls, unnecessary re-reads, and missed
