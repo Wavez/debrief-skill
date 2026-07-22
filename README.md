@@ -90,8 +90,8 @@ constraints.**
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for release history.
+See [CHANGELOG.md](docs/CHANGELOG.md) for release history.
 
 ## License
 
-[MIT](../LICENSE)
+[MIT](LICENSE)
