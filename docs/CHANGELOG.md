@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/Wavez/debrief-skill/compare/v1.1.0...v1.1.1) (2026-07-22)
+
+
+### Bug Fixes
+
+* move README back to repo root ([10dd339](https://github.com/Wavez/debrief-skill/commit/10dd33920e082610bc05c1efedfb7de45a658459))
+
 ## [1.1.0](https://github.com/Wavez/debrief-skill/compare/v1.0.0...v1.1.0) (2026-07-22)
 
 
