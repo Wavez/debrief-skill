@@ -27,6 +27,12 @@ retro-ing the whole thing by default.
   calls, guessing at something checkable instead of checking it, more cycles (build/render/test/
   whatever the domain's loop is) than needed, restating information already established earlier
   in the conversation?
+- **Errored vs. successful repetition, distinct from the above:** an errored tool call is
+  self-flagging — it produces visible failure output you'd naturally scan for. A step that
+  succeeded 2+ times but hand-wrote near-identical logic each time (the same parsing script,
+  the same multi-part check, the same query shape) leaves no error signal, so it won't surface
+  by scanning for failures. Find it by comparing tool-call bodies against earlier calls in the
+  same session, not by looking for what broke.
 - Was work batched appropriately, or did back-and-forth trickle in one item at a time when it
   could have been gathered first?
 - Two-sided: where should a subagent, fork, or parallel tool call have been used but wasn't -
@@ -67,7 +73,10 @@ retro-ing the whole thing by default.
   a more serious regression than a first-time miss — flag it as such, don't let it read the same
   as a novel issue.
 - Is there a missing tool, script, or piece of documentation that would have made this session
-  faster?
+  faster? **This is a required check, not an optional one:** count how many times this session
+  hand-wrote near-identical logic inline (see the repetition check in section 1). Two or more
+  occurrences is itself the signal that a reusable script or skill asset is missing — independent
+  of whether any individual attempt errored.
 
 ## Output format
 
@@ -89,7 +98,8 @@ What's worth repeating, stated briefly — what happened and why it mattered, no
 
 ### Suggested improvements
 Split into two prefixed lists: 🤖 safe to apply automatically (e.g. a memory save) vs. 👤
-requiring the user's approval (e.g. editing CLAUDE.md).
+requiring the user's approval (e.g. editing CLAUDE.md, or extracting logic that was hand-written
+2+ times this session into a reusable script or asset in the relevant skill).
 
 ## Rules
 
