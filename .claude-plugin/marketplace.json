@@ -3,12 +3,12 @@
   "owner": {
     "name": "Gal Margalit (Wavez)"
   },
-  "description": "A single-file Claude Code skill that reviews how a session went — not the code it produced.",
+  "description": "A Claude Code skill that catches the process mistakes silently draining your sessions.",
   "plugins": [
     {
       "name": "debrief-skill",
       "source": "./",
-      "description": "A single-file Claude Code skill that reviews how a session went — not the code it produced. Catches mistimed questions, regressions, and wasted tool calls.",
+      "description": "A Claude Code skill that catches the process mistakes silently draining your sessions — unverified \"done\" claims, repeated regressions, wasted tokens.",
       "version": "1.1.0",
       "author": {
         "name": "Gal Margalit (Wavez)"
