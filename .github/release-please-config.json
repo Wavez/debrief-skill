@@ -4,7 +4,8 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "version-file": "version.txt",
+      "version-file": ".github/version.txt",
+      "changelog-path": "docs/CHANGELOG.md",
       "include-component-in-tag": false,
       "extra-files": [
         {

@@ -8,6 +8,9 @@
 session retrospectives, with no scripts or dependencies - it catches mistimed questions,
 repeated mistakes, and the wasted tool calls and tokens that a code review can't see.
 
+*Why this exists: [I hit a Claude Code usage limit mid-refactor and went looking for where the
+tokens actually went](PLACEHOLDER_MEDIUM_URL) — this is what I built.*
+
 ## Install
 
 ```
@@ -87,4 +90,4 @@ constraints.**
 
 ## License
 
-[MIT](./LICENSE)
+[MIT](../LICENSE)
