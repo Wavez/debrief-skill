@@ -1,6 +1,6 @@
 ---
 name: debrief
-description: Use when wrapping up a Claude Code session, or when asked for a debrief, session retrospective, or post-mortem. Reviews how the session went, not what it built — catches mistimed questions, repeated mistakes, and wasted tool calls that a code review can't see.
+description: Reviews how a Claude Code session's process went, not the code it produced. Use when wrapping up a session or asked for a debrief, retrospective, or post-mortem.
 ---
 
 # Session Retrospective
