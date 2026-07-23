@@ -1,8 +1,8 @@
 # debrief
 
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-blue?logo=claude&logoColor=white)](https://claude.ai/code)
-[![Version](https://img.shields.io/github/v/release/Wavez/debrief-skill)](https://github.com/Wavez/debrief-skill/releases)
-[![License: MIT](https://img.shields.io/github/license/Wavez/debrief-skill)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
+[![Version](https://badgen.net/github/release/Wavez/debrief-skill)](https://github.com/Wavez/debrief-skill/releases)
+[![License: MIT](https://badgen.net/github/license/Wavez/debrief-skill?color=green)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
 
 **Reviews how the session went, not just what it produced.** A single-file Claude Code skill for
 session retrospectives, with no scripts or dependencies - it catches mistimed questions,
