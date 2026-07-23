@@ -9,7 +9,7 @@
       "name": "debrief-skill",
       "source": "./",
       "description": "A Claude Code skill that catches the process mistakes silently draining your sessions — unverified \"done\" claims, repeated regressions, wasted tokens.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "author": {
         "name": "Gal Margalit (Wavez)"
       },
