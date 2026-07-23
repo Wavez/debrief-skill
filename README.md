@@ -1,12 +1,12 @@
-<p align="center">
-  <img src="assets/logo.svg" alt="debrief" height="56">
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/logo-light.svg">
+  <img src="assets/logo-light.svg" alt="debrief" height="56">
+</picture>
 
-<p align="center">
-  <a href="https://claude.ai/code"><img alt="Claude Code" src="https://badgen.net/badge/Claude%20Code/Skill/blue?icon=claude"></a>
-  <a href="https://github.com/Wavez/debrief-skill/releases"><img alt="Version" src="https://badgen.net/github/release/Wavez/debrief-skill"></a>
-  <a href="https://github.com/Wavez/debrief-skill/blob/main/LICENSE"><img alt="License: MIT" src="https://badgen.net/github/license/Wavez/debrief-skill?color=green"></a>
-</p>
+[![Claude Code](https://badgen.net/badge/Claude%20Code/Skill/blue?icon=claude)](https://claude.ai/code)
+[![Version](https://badgen.net/github/release/Wavez/debrief-skill)](https://github.com/Wavez/debrief-skill/releases)
+[![License: MIT](https://badgen.net/github/license/Wavez/debrief-skill?color=green)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
 
 **Reviews how the session went, not just what it produced.** A single-file Claude Code skill for
 session retrospectives, with no scripts or dependencies - it catches mistimed questions,
