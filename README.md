@@ -1,6 +1,6 @@
 # debrief
 
-[![Claude Code](https://img.shields.io/badge/Claude_Code-compatible-blue?logo=claude&logoColor=white)](https://claude.ai/code)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-blue?logo=claude&logoColor=white)](https://claude.ai/code)
 [![Version](https://img.shields.io/github/v/release/Wavez/debrief-skill)](https://github.com/Wavez/debrief-skill/releases)
 [![License: MIT](https://img.shields.io/github/license/Wavez/debrief-skill)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
 
