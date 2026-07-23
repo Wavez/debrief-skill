@@ -3,6 +3,7 @@
   <source media="(prefers-color-scheme: light)" srcset="assets/logo-light.svg">
   <img src="assets/logo-light.svg" alt="debrief" height="56">
 </picture>
+<br><br>
 
 [![Claude Code](https://badgen.net/badge/Claude%20Code/Skill/blue?icon=claude)](https://claude.ai/code)
 [![Version](https://badgen.net/github/release/Wavez/debrief-skill)](https://github.com/Wavez/debrief-skill/releases)
