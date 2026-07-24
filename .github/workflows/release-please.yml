@@ -21,3 +21,20 @@ jobs:
           manifest-file: .github/.release-please-manifest.json
       - uses: kevincobain2000/action-camo-purge@v1
         if: ${{ steps.release.outputs.release_created }}
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          ref: main
+      - name: Bust Version badge cache
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          sed -i -E "s#(badgen\.net/github/release/Wavez/debrief-skill)(\?[^)]*)?#\1?ref=${{ steps.release.outputs.sha }}#" README.md
+          if git diff --quiet README.md; then
+            echo "No change needed"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: bust Version badge cache for ${{ steps.release.outputs.tag_name }}"
+            git push
+          fi
