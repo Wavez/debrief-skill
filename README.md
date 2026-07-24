@@ -77,8 +77,9 @@ constraints.**
 - None needed this session.
 
 👤 Requiring your approval:
-- Global CLAUDE.md: note the timing preference above — a general collaboration habit, not tied
-  to this repo.
+- Global CLAUDE.md: don't ask for a decision before the user has explicitly signaled they're
+  done giving feedback, even if the question is reasonable in content — a general collaboration
+  habit, not tied to this repo.
 ```
 
 ## When to use it
