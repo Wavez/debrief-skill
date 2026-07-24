@@ -111,9 +111,15 @@ CLAUDE.md":
   before agreeing.
 - Extracting hand-written logic into a reusable script or skill asset.
 
-Classify each finding: true regardless of repo → global `CLAUDE.md`. Specific to this repo and
-personal → project memory. Specific to this repo but relevant to anyone working in it → repo
-`CLAUDE.md`.
+These destinations aren't mutually exclusive — a finding can belong in more than one. Ask
+independently for each, don't stop at the first match:
+- True regardless of which repo you're in (a general working-style preference)? → global
+  `CLAUDE.md`.
+- Worth a personal, detailed record for next time (the incident, the "why," the full context)?
+  → project memory.
+- A reusable fact, technique, or convention that anyone working in this codebase — including a
+  fresh session with no memory of this one — would need to redo the same work? → repo
+  `CLAUDE.md`, even if it's *also* going to project memory in more detail.
 
 ## Rules
 
