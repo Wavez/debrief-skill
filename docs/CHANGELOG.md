@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/Wavez/debrief-skill/compare/v1.1.0...v1.2.0) (2026-07-24)
+
+
+### Features
+
+* name a specific memory destination in suggested improvements ([6bf1550](https://github.com/Wavez/debrief-skill/commit/6bf1550448ec21fdbdc4a8e85141e8f94abd3ffb))
+
+
+### Bug Fixes
+
+* move README back to repo root ([10dd339](https://github.com/Wavez/debrief-skill/commit/10dd33920e082610bc05c1efedfb7de45a658459))
+
 ## [1.1.0](https://github.com/Wavez/debrief-skill/compare/v1.0.0...v1.1.0) (2026-07-22)
 
 
