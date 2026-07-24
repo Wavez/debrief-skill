@@ -15,6 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
+        id: release
         with:
           config-file: .github/release-please-config.json
           manifest-file: .github/.release-please-manifest.json
+      - uses: kevincobain2000/action-camo-purge@v1
+        if: ${{ steps.release.outputs.release_created }}
