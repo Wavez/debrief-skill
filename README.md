@@ -46,9 +46,10 @@ approve it.
   missed or re-violated standing instructions, and a **constraint-timing check**: whether hard
   requirements were confirmed before finalizing a plan, or only discovered after the work was
   already done.
-- **Follow-through for next time** — including a **regression check**: cross-references findings
+- **Follow-through for next time** — including a **regression check** (cross-references findings
   against saved feedback/memory, so a repeated mistake reads as a regression, not a first-time
-  miss.
+  miss) and a check for **missing tools or scripts**: hand-writing the same logic twice in a
+  session is itself flagged as a signal that a reusable script or skill asset is missing.
 
 ## Example output
 
@@ -76,7 +77,8 @@ constraints.**
 - None needed this session.
 
 👤 Requiring your approval:
-- Save a memory noting the timing preference above.
+- Global CLAUDE.md: note the timing preference above — a general collaboration habit, not tied
+  to this repo.
 ```
 
 ## When to use it

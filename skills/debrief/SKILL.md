@@ -97,9 +97,23 @@ sentence.
 What's worth repeating, stated briefly — what happened and why it mattered, not a narrative.
 
 ### Suggested improvements
-Split into two prefixed lists: 🤖 safe to apply automatically (e.g. a memory save) vs. 👤
-requiring the user's approval (e.g. editing CLAUDE.md, or extracting logic that was hand-written
-2+ times this session into a reusable script or asset in the relevant skill).
+Split into two prefixed lists: 🤖 safe to apply automatically vs. 👤 requiring the user's
+approval. Within 👤, name the specific destination for each item — don't just say "edit
+CLAUDE.md":
+
+🤖 Safe to apply automatically:
+- Project/local memory — personal to this repo, not committed.
+
+👤 Requiring approval:
+- **Repo `CLAUDE.md`** — committed, shared with anyone who opens this repo.
+- **Global `CLAUDE.md`** (`~/.claude/CLAUDE.md`) — applies across every repo and session, not
+  just this one. Flag explicitly that it's global so the user knows the wider blast radius
+  before agreeing.
+- Extracting hand-written logic into a reusable script or skill asset.
+
+Classify each finding: true regardless of repo → global `CLAUDE.md`. Specific to this repo and
+personal → project memory. Specific to this repo but relevant to anyone working in it → repo
+`CLAUDE.md`.
 
 ## Rules
 
