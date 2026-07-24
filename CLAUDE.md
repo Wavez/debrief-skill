@@ -69,6 +69,22 @@ Confirm the output shows the expected version bump and lists the correct files u
     git branch -D test/validate-release-config
     git push origin --delete test/validate-release-config
 
+## Debugging the Version badge
+
+The README's Version badge (`badgen.net/github/release/...`) is proxied through GitHub's camo
+cache when rendered on github.com, which caches independently of badgen.net's own cache and is
+unreliable to `PURGE` directly (confirmed: a `PURGE` request returns `200 {"status":"ok"}`
+without reliably invalidating the cached image). `.github/workflows/release-please.yml` works
+around this by appending `?ref=<release-sha>` to the badge URL after every release, forcing a
+genuinely new URL each time instead of depending on cache invalidation.
+
+To check what version a badge (or its camo-proxied copy) is actually rendering:
+
+    curl -s "$URL" | grep -oE '<text[^>]*>v?[0-9]+\.[0-9]+\.[0-9]+</text>' | tail -2
+
+Find the live camo URL for a specific badge by fetching the repo's GitHub page and grepping for
+`camo\.githubusercontent\.com` — the original badge URL is hex-encoded in the second path segment.
+
 ## Other conventions
 
 - `.claude-plugin/plugin.json`'s `version` and `.claude-plugin/marketplace.json`'s
