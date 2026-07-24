@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Wavez/debrief-skill/compare/v1.2.1...v1.3.0) (2026-07-24)
+
+
+### Features
+
+* allow suggested improvements to target more than one destination ([95beaee](https://github.com/Wavez/debrief-skill/commit/95beaee8b4c6b18e8d57709f011688f1f71d4fb8))
+
 ## [1.2.1](https://github.com/Wavez/debrief-skill/compare/v1.2.0...v1.2.1) (2026-07-24)
 
 
