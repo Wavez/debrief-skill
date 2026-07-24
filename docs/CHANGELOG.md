@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Wavez/debrief-skill/compare/v1.2.0...v1.2.1) (2026-07-24)
+
+
+### Bug Fixes
+
+* trigger a release to verify the badge auto-refresh workflow ([56768ff](https://github.com/Wavez/debrief-skill/commit/56768ffdea0f03777bf381c0035690865c826b7f))
+
 ## [1.2.0](https://github.com/Wavez/debrief-skill/compare/v1.1.0...v1.2.0) (2026-07-24)
 
 
