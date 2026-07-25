@@ -69,14 +69,18 @@ Confirm the output shows the expected version bump and lists the correct files u
     git branch -D test/validate-release-config
     git push origin --delete test/validate-release-config
 
-## Debugging the Version badge
+## Debugging the Version and License badges
 
-The README's Version badge (`badgen.net/github/release/...`) is proxied through GitHub's camo
-cache when rendered on github.com, which caches independently of badgen.net's own cache and is
-unreliable to `PURGE` directly (confirmed: a `PURGE` request returns `200 {"status":"ok"}`
-without reliably invalidating the cached image). `.github/workflows/release-please.yml` works
-around this by appending `?ref=<release-sha>` to the badge URL after every release, forcing a
-genuinely new URL each time instead of depending on cache invalidation.
+The README's Version and License badges (`badgen.net/github/release/...` and
+`badgen.net/github/license/...`) are proxied through GitHub's camo cache when rendered on
+github.com, which caches independently of badgen.net's own cache and is unreliable to `PURGE`
+directly (confirmed: a `PURGE` request returns `200 {"status":"ok"}` without reliably
+invalidating the cached image). Worse, a badgen.net request that itself fails (e.g. hitting
+GitHub's unauthenticated API rate limit) gets cached as an error image the same way a normal
+response would — camo has no concept of "this was a failure, don't cache it."
+`.github/workflows/release-please.yml` works around this by appending `?ref=<release-sha>` to
+both badge URLs after every release, forcing a genuinely new URL each time instead of depending
+on cache invalidation.
 
 To check what version a badge (or its camo-proxied copy) is actually rendering:
 
