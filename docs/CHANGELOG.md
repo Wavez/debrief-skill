@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.1](https://github.com/Wavez/debrief-skill/compare/v1.3.0...v1.3.1) (2026-07-25)
+
+
+### Bug Fixes
+
+* also bust License badge camo cache on release ([30540c5](https://github.com/Wavez/debrief-skill/commit/30540c59724d3a60babfb0a927a970a1bd43ccba))
+* bust stuck License badge cache one-off ([a262486](https://github.com/Wavez/debrief-skill/commit/a2624868521c3b4235fad561447daf469a344ef1))
+
 ## [1.3.0](https://github.com/Wavez/debrief-skill/compare/v1.2.1...v1.3.0) (2026-07-24)
 
 
