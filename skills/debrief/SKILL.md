@@ -1,6 +1,6 @@
 ---
 name: debrief
-description: Reviews how a Claude Code session's process went, not the code it produced. Use when wrapping up a session or asked for a debrief, retrospective, or post-mortem.
+description: Reviews a session's process, not the work it produced. Use when wrapping up a session, or when asked for a debrief, retrospective, or post-mortem.
 ---
 
 # Session Retrospective
@@ -38,6 +38,21 @@ retro-ing the whole thing by default.
 - Two-sided: where should a subagent, fork, or parallel tool call have been used but wasn't -
   AND where was one used well and caught something real? Name both kinds of moment if they
   happened; don't only surface missed opportunities.
+- **Overlapping dispatch, distinct from the above:** when two or more subagents ran against
+  related mandates, did each independently redo work a sibling had already done — the same
+  sources fetched twice, the same survey compiled twice — because neither was handed the
+  other's output? A dispatch that was correct to make in isolation can still waste a whole
+  context window by duplicating its sibling. Read the dispatch prompts against each other —
+  they're short and sit close together — rather than diffing everything the agents returned.
+- **Rework at a context seam:** if this session's context was summarized or compacted partway
+  through, the compaction itself is not the finding — long sessions compact, and that is the
+  system working as designed. What matters is whether anything had to be re-established
+  afterward: a fact re-fetched, a file re-read, a decision re-litigated because the detail
+  didn't survive. Look for the rework first; if there is none, there is no finding here, and
+  saying nothing is correct. If you can cheaply confirm where the boundary fell (this session's
+  own transcript under `~/.claude/projects/` records compaction events), do — but treat that as
+  an index for where to look, never as the evidence itself, and never block this check on being
+  able to read it.
 
 ## 2. Collaboration and communication quality
 
@@ -88,10 +103,12 @@ One or two sentences, direct.
 ### Concrete issues
 Each grounded in a specific real moment from this session (not a hypothetical), prefixed with
 both a severity marker and label so a real process failure doesn't read the same as a minor
-nitpick: `🔴 High:`, `🟡 Medium:`, `🟢 Low:`. State the observable behavior and its impact, not
-intent or blame (e.g. "used X, causing Y" rather than "violated the rule by doing X"). When a
-finding rests on multiple pieces of evidence, list them as short sub-bullets instead of one long
-sentence.
+nitpick: `🔴 High:` for wasted work, wasted tokens, or a claim that risked being acted on while
+wrong; `🟡 Medium:` for a noticeable inefficiency or collaboration slip that cost real time;
+`🟢 Low:` for polish worth naming once and not repeating. State the observable behavior and its
+impact, not intent or blame (e.g. "used X, causing Y" rather than "violated the rule by doing
+X"). When a finding rests on multiple pieces of evidence, list them as short sub-bullets instead
+of one long sentence.
 
 ### What went well
 What's worth repeating, stated briefly — what happened and why it mattered, not a narrative.
