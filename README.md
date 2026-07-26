@@ -9,7 +9,7 @@
 [![Version](https://badgen.net/github/release/Wavez/debrief-skill?ref=dfb97aeab67e0030298d989b5a870fb844312165)](https://github.com/Wavez/debrief-skill/releases)
 [![License: MIT](https://badgen.net/github/license/Wavez/debrief-skill?color=green&ref=dfb97aeab67e0030298d989b5a870fb844312165)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
 
-**Reviews how the session went, not just what it produced.** A single-file Claude Code skill for
+**Reviews a session's process, not the work it produced.** A single-file Claude Code skill for
 session retrospectives, with no scripts or dependencies - it catches mistimed questions,
 repeated mistakes, and the wasted tool calls and tokens that a code review can't see.
 
@@ -39,7 +39,9 @@ approve it.
 
 - **Efficiency and token usage** — redundant tool calls, unnecessary re-reads, and missed
   batching or parallelization, so you catch wasted tokens and time before they repeat next
-  session.
+  session. Includes an **overlapping-dispatch check** (two subagents that independently redid
+  each other's work) and a **context-seam check** (whether anything had to be re-established
+  after a long session's context got summarized).
 - **Collaboration and communication quality** — including a **timing check**: flags a question
   that's reasonable in content but asked before the user signaled they were done giving feedback.
 - **Correctness and process discipline** — unverified claims, unconfirmed hard-to-reverse actions,
