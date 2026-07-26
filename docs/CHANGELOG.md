@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/Wavez/debrief-skill/compare/v1.3.1...v1.4.0) (2026-07-26)
+
+
+### Features
+
+* add overlapping-dispatch and context-seam checks ([db73ee5](https://github.com/Wavez/debrief-skill/commit/db73ee5330b37ec1c022de8b798d021f90ba5835))
+
 ## [1.3.1](https://github.com/Wavez/debrief-skill/compare/v1.3.0...v1.3.1) (2026-07-25)
 
 
