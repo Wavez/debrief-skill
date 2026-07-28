@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/Wavez/debrief-skill/compare/v1.4.0...v1.4.1) (2026-07-28)
+
+
+### Bug Fixes
+
+* consolidate suggested-improvements output into a single list ([51bfaa2](https://github.com/Wavez/debrief-skill/commit/51bfaa21bb9b1221fa56d13b52355ea9a3fa63b1))
+
 ## [1.4.0](https://github.com/Wavez/debrief-skill/compare/v1.3.1...v1.4.0) (2026-07-26)
 
 
