@@ -9,9 +9,9 @@
 [![Version](https://badgen.net/github/release/Wavez/debrief-skill?ref=960c6ade9e42ed807d1e867378397f952e6050a3)](https://github.com/Wavez/debrief-skill/releases)
 [![License: MIT](https://badgen.net/github/license/Wavez/debrief-skill?color=green&ref=960c6ade9e42ed807d1e867378397f952e6050a3)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
 
-**Reviews a session's process, not the work it produced.** A single-file Claude Code skill for
-session retrospectives, with no scripts or dependencies — it catches mistimed questions,
-repeated mistakes, and the wasted tool calls and tokens that a code review can't see.
+**Catches the wasted tokens, mistimed questions, and repeated mistakes a code review can't
+see.** A single-file Claude Code skill for session retrospectives, with no scripts or
+dependencies.
 
 *Origin story (soon): [We Review Our Code. Why Don't We Review How We Build It With
 AI?](PLACEHOLDER_MEDIUM_URL)*
@@ -20,7 +20,8 @@ AI?](PLACEHOLDER_MEDIUM_URL)*
 
 - **Use** when wrapping up a Claude Code session, or when asked for a debrief, a session
   retrospective, or a post-mortem.
-- **Not for** reviewing the code or artifacts a session produced — other tools handle that.
+- **Pairs with code review**: code review evaluates the implementation; `/debrief` evaluates
+  how the session that produced it went.
 
 ## Install
 
@@ -92,7 +93,7 @@ approve it**.
 >   feedback" signal before asking the user to decide between options, even when the question
 >   itself is reasonable. General collaboration habit, not specific to this repo.
 
-## Why not an existing retrospective skill?
+## Compared to other retrospective tools
 
 If you already use a different retrospective tool, here's how this one differs:
 
