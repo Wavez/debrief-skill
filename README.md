@@ -6,8 +6,8 @@
 <br><br>
 
 [![Claude Code](https://badgen.net/badge/Claude%20Code/Skill/blue?icon=claude)](https://claude.ai/code)
-[![Version](https://badgen.net/github/release/Wavez/debrief-skill?ref=7f7b46c1bdca6d603e0cc451804e1586920a9229)](https://github.com/Wavez/debrief-skill/releases)
-[![License: MIT](https://badgen.net/github/license/Wavez/debrief-skill?color=green&ref=7f7b46c1bdca6d603e0cc451804e1586920a9229)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
+[![Version](https://badgen.net/github/release/Wavez/debrief-skill?ref=960c6ade9e42ed807d1e867378397f952e6050a3)](https://github.com/Wavez/debrief-skill/releases)
+[![License: MIT](https://badgen.net/github/license/Wavez/debrief-skill?color=green&ref=960c6ade9e42ed807d1e867378397f952e6050a3)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
 
 **Reviews a session's process, not the work it produced.** A single-file Claude Code skill for
 session retrospectives, with no scripts or dependencies - it catches mistimed questions,
