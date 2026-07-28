@@ -17,6 +17,10 @@ Common types used here: `feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `ci`
 - A breaking change to the skill's behavior or interface: use `feat!:` (or `fix!:`), or add a
   `BREAKING CHANGE: <description>` footer.
 - Keep the description short, imperative, lowercase after the colon (e.g. `feat: add scope option`).
+- `skills/debrief/SKILL.md` is the skill itself, not documentation — this is a single-file skill
+  with no separate source code, so edits to it change actual runtime behavior (the report format,
+  the checks performed) and should be typed `feat`/`fix`/`refactor` accordingly, based on what
+  changed. Reserve `docs:` for README/example-only edits that don't touch `SKILL.md`.
 
 ### Why this matters here
 

@@ -57,31 +57,29 @@ approve it.
 
 ## Example output
 
-```
-### Overall assessment
-Mostly efficient session, one timing slip worth flagging.
-
-### Concrete issues
-
-🔴 **High: Claimed the fix was "done" before running the test suite.**
-
-🟡 **Medium: Asked whether the architecture was finalized while you were still listing
-constraints.**
-- A mistimed question — reasonable in content, asked before you'd signaled you were done
-  giving feedback.
-
-🟢 **Low: Re-read config.py three times after no edits had been made to it.**
-
-### What went well
-- Batched the four independent file edits into a single parallel tool call.
-
-### 💡 Suggested improvements
-- **Project memory** — record the "claimed done before testing" incident (the High finding
-  above), so a repeat of it next session reads as a regression, not a first-time miss.
-- **Global `CLAUDE.md`** — from the Medium finding above: wait for an explicit "done giving
-  feedback" signal before asking the user to decide between options, even when the question
-  itself is reasonable. General collaboration habit, not specific to this repo.
-```
+> **Overall assessment**
+> Mostly efficient session, one timing slip worth flagging.
+>
+> **Concrete issues**
+>
+> 🔴 **High: Claimed the fix was "done" before running the test suite.**
+>
+> 🟡 **Medium: Asked whether the architecture was finalized while you were still listing
+> constraints.**
+> - A mistimed question — reasonable in content, asked before you'd signaled you were done
+>   giving feedback.
+>
+> 🟢 **Low: Re-read config.py three times after no edits had been made to it.**
+>
+> **What went well**
+> - Batched the four independent file edits into a single parallel tool call.
+>
+> **💡 Suggested improvements**
+> - **Project memory** — record the "claimed done before testing" incident (the High finding
+>   above), so a repeat of it next session reads as a regression, not a first-time miss.
+> - **Global `CLAUDE.md`** — from the Medium finding above: wait for an explicit "done giving
+>   feedback" signal before asking the user to decide between options, even when the question
+>   itself is reasonable. General collaboration habit, not specific to this repo.
 
 ## When to use it
 
