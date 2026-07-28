@@ -60,7 +60,7 @@ approve it**.
   - Constraint-timing: whether hard requirements were confirmed before finalizing a plan, or
     only discovered after the work was done.
 - **Follow-through for next time**
-  - Whether findings get carried forward instead of repeating.
+  - What's worth saving from this session so it doesn't need to be re-learned next time.
   - Regression check: cross-references findings against saved feedback/memory, so a repeated
     mistake reads as a regression, not a first-time miss.
   - Missing tools or scripts: hand-writing the same logic twice in a session is itself flagged
