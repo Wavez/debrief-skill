@@ -45,21 +45,24 @@ approve it**.
 
 - **Efficiency and token usage** — redundant tool calls, unnecessary re-reads, and missed
   batching or parallelization, so you catch wasted tokens and time before they repeat next
-  session. Includes an **overlapping-dispatch check** (two subagents that independently redid
-  each other's work) and a **context-seam check** (whether anything had to be re-established
-  after a long session's context got summarized).
+  session.
+  - **Overlapping-dispatch check** — two subagents that independently redid each other's work.
+  - **Context-seam check** — whether anything had to be re-established after a long session's
+    context got summarized.
 - **Collaboration and communication quality** — questions asked when needed and skipped when the
   answer was already checkable, standing instructions honored or missed, and whether replies
-  stayed concise. Includes a **timing check**: a question that's reasonable in content but lands
-  before you've signaled you're done giving feedback.
+  stayed concise.
+  - **Timing check** — a question that's reasonable in content but lands before you've signaled
+    you're done giving feedback.
 - **Correctness and process discipline** — unverified claims, hard-to-reverse actions taken
-  without confirming, overlooked project conventions, and a **constraint-timing check**: whether
-  hard requirements were confirmed before finalizing a plan, or only discovered after the work
-  was done.
-- **Follow-through for next time** — including a **regression check** (cross-references findings
-  against saved feedback/memory, so a repeated mistake reads as a regression, not a first-time
-  miss) and a check for **missing tools or scripts**: hand-writing the same logic twice in a
-  session is itself flagged as a signal that a reusable script or skill asset is missing.
+  without confirming, overlooked project conventions.
+  - **Constraint-timing check** — whether hard requirements were confirmed before finalizing a
+    plan, or only discovered after the work was done.
+- **Follow-through for next time**
+  - **Regression check** — cross-references findings against saved feedback/memory, so a
+    repeated mistake reads as a regression, not a first-time miss.
+  - **Missing tools or scripts** — hand-writing the same logic twice in a session is itself
+    flagged as a signal that a reusable script or skill asset is missing.
 
 ## Example output
 
