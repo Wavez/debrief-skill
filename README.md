@@ -29,8 +29,9 @@ AI?](PLACEHOLDER_MEDIUM_URL)*
 /plugin install debrief-skill@debrief-skill
 ```
 
-To auto-update: run `/plugin` → **Marketplaces** → select `debrief-skill` → **Enable
-auto-update**.
+> [!TIP]
+> To auto-update: run `/plugin` → **Marketplaces** → select `debrief-skill` → **Enable
+> auto-update**.
 
 ## Usage
 
