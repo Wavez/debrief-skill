@@ -10,11 +10,17 @@
 [![License: MIT](https://badgen.net/github/license/Wavez/debrief-skill?color=green&ref=960c6ade9e42ed807d1e867378397f952e6050a3)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
 
 **Reviews a session's process, not the work it produced.** A single-file Claude Code skill for
-session retrospectives, with no scripts or dependencies - it catches mistimed questions,
+session retrospectives, with no scripts or dependencies — it catches mistimed questions,
 repeated mistakes, and the wasted tool calls and tokens that a code review can't see.
 
-*Origin story (soon): [I hit a usage limit and found the real bottleneck wasn't
-tokens](PLACEHOLDER_MEDIUM_URL).*
+*Origin story (soon): [We Review Our Code. Why Don't We Review How We Build It With
+AI?](PLACEHOLDER_MEDIUM_URL)*
+
+## When to use it
+
+- **Use** when wrapping up a Claude Code session, or when asked for a debrief, a session
+  retrospective, or a post-mortem.
+- **Not for** reviewing the code or artifacts a session produced — other tools handle that.
 
 ## Install
 
@@ -23,17 +29,16 @@ tokens](PLACEHOLDER_MEDIUM_URL).*
 /plugin install debrief-skill@debrief-skill
 ```
 
-## Auto updating
-
-Run `/plugin` → **Marketplaces** → select `debrief-skill` → **Enable auto-update**.
+To auto-update: run `/plugin` → **Marketplaces** → select `debrief-skill` → **Enable
+auto-update**.
 
 ## Usage
 
 Run `/debrief` at the end of a session so Claude stops repeating the same process mistakes and
 gets better at working with you over time.
 
-Read-only and self-contained: it never edits files or saves memory unless you explicitly
-approve it.
+Read-only and self-contained: it **never edits files or saves memory unless you explicitly
+approve it**.
 
 ## What it checks
 
@@ -81,13 +86,9 @@ approve it.
 >   feedback" signal before asking the user to decide between options, even when the question
 >   itself is reasonable. General collaboration habit, not specific to this repo.
 
-## When to use it
-
-- **Use** when wrapping up a Claude Code session, or when asked for a debrief, a session
-  retrospective, or a post-mortem.
-- **Not for** reviewing the code or artifacts a session produced - other tools handle that.
-
 ## Why not an existing retrospective skill?
+
+If you already use a different retrospective tool, here's how this one differs:
 
 | Alternative | What it does differently |
 |---|---|
