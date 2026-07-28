@@ -113,15 +113,12 @@ of one long sentence.
 ### What went well
 What's worth repeating, stated briefly — what happened and why it mattered, not a narrative.
 
-### Suggested improvements
-Split into two prefixed lists: 🤖 safe to apply automatically vs. 👤 requiring the user's
-approval. Within 👤, name the specific destination for each item — don't just say "edit
-CLAUDE.md":
+### 💡 Suggested improvements
+A single flat list. Every item here requires the user's approval before anything is applied —
+this skill produces a report, not automatic changes (see Rules below). Name the specific
+destination for each item — don't just say "edit CLAUDE.md":
 
-🤖 Safe to apply automatically:
-- Project/local memory — personal to this repo, not committed.
-
-👤 Requiring approval:
+- **Project/local memory** — personal to this repo, not committed.
 - **Repo `CLAUDE.md`** — committed, shared with anyone who opens this repo.
 - **Global `CLAUDE.md`** (`~/.claude/CLAUDE.md`) — applies across every repo and session, not
   just this one. Flag explicitly that it's global so the user knows the wider blast radius
