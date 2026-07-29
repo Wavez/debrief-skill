@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.0](https://github.com/Wavez/debrief-skill/compare/v1.4.1...v1.5.0) (2026-07-29)
+
+
+### Features
+
+* add a hook as a suggested-improvements destination for proven regressions ([00f44b2](https://github.com/Wavez/debrief-skill/commit/00f44b26c1acf3fc99c1ec02077525c8e45cc5ae))
+* scope a suggested hook to match the regressed rule's own scope ([771c12f](https://github.com/Wavez/debrief-skill/commit/771c12fea39d758ee9ff8ce8a9de93a1294f84c3))
+
 ## [1.4.1](https://github.com/Wavez/debrief-skill/compare/v1.4.0...v1.4.1) (2026-07-28)
 
 
