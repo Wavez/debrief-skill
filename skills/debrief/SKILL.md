@@ -19,19 +19,26 @@ conventions were already supposed to be followed — but don't assume any of the
 session touched more than one repo or directory, check each one's own conventions rather than
 assuming a single "current repo" applies throughout.
 
-**Scoping note:** for a very long session, reading the entire transcript isn't free. Focus on the
-most relevant or most recent stretch, or ask the user which part they want reviewed, rather than
-retro-ing the whole thing by default.
+**Scoping note:** match effort to the session. For a very long session, reading the entire
+transcript isn't free — default to the most relevant or most recent stretch, and only ask the
+user which part they want reviewed if you genuinely can't tell from the request itself. For a
+short, uneventful session (a handful of turns, no errors, no corrections), a quick pass
+confirming that is enough — don't run every check below at full depth just because the checklist
+exists.
 
 **Every finding in every section below must cite a specific, real moment from this session — no
 generic advice.** This governs the whole report, not just the sections where it's easy to satisfy.
+If part of the session is unavailable because it was compacted or summarized away, don't invent a
+plausible-sounding moment to cover that gap — say the coverage is limited for that stretch and
+scope findings to what you can actually verify.
 
 ## 1. Efficiency and token usage
 
 - Which steps consumed unnecessary tokens — re-reading files that hadn't changed, redundant tool
   calls, guessing at something checkable instead of checking it, more cycles (build/render/test/
   whatever the domain's loop is) than needed, restating information already established earlier
-  in the conversation?
+  in the conversation? (If a guess produced a claim that could have been acted on while wrong,
+  file it once under section 3's correctness check instead of here.)
 - **Errored vs. successful repetition, distinct from the above:** an errored tool call is
   self-flagging — it produces visible failure output you'd naturally scan for. A step that
   succeeded 2+ times but hand-wrote near-identical logic each time (the same parsing script,
@@ -40,22 +47,24 @@ generic advice.** This governs the whole report, not just the sections where it'
   near-identical parameters in the same session — that's the finding, without needing to diff
   every call by hand.
 - Was work batched appropriately, or did back-and-forth trickle in one item at a time when it
-  could have been gathered first?
-- Two-sided: where should a subagent, fork, or parallel tool call have been used but wasn't -
+  could have been gathered first? A mechanical tell: 2+ user messages in a row adding to or
+  revising the same request, with nothing in between that explains why the addition couldn't
+  have come the first time.
+- Two-sided: where should a subagent, fork, or parallel tool call have been used but wasn't —
   AND where was one used well and caught something real? Name both kinds of moment if they
   happened; don't only surface missed opportunities.
-- **Overlapping dispatch, distinct from the above:** when two or more subagents ran against
-  related mandates, did each independently redo work a sibling had already done — the same
-  sources fetched twice, the same survey compiled twice — because neither was handed the
-  other's output? A dispatch that was correct to make in isolation can still waste a whole
-  context window by duplicating its sibling. Read the dispatch prompts against each other —
+- **Overlapping dispatch (skip if fewer than two subagents ran), distinct from the above:** did
+  each independently redo work a sibling had already done — the same sources fetched twice, the
+  same survey compiled twice — because neither was handed the other's output? A dispatch that
+  was correct to make in isolation can still waste a whole context window by duplicating its
+  sibling. Read the dispatch prompts against each other —
   they're short and sit close together — rather than diffing everything the agents returned. If
   a sibling's raw output didn't survive context compaction or summarization, say so and skip the
   comparison rather than assuming no duplication occurred.
-- **Rework at a context seam:** if this session's context was summarized or compacted partway
-  through, the compaction itself is not the finding — long sessions compact, and that is the
-  system working as designed. What matters is whether anything had to be re-established
-  afterward: a fact re-fetched, a file re-read, a decision re-litigated because the detail
+- **Rework at a context seam (skip if this session was never compacted):** the compaction itself
+  is not the finding — long sessions compact, and that is the system working as designed. What
+  matters is whether anything had to be re-established afterward: a fact re-fetched, a file
+  re-read, a decision re-litigated because the detail
   didn't survive. Look for the rework first; if there is none, there is no finding here, and
   saying nothing is correct. If you can cheaply confirm where the boundary fell (this session's
   own transcript under `~/.claude/projects/` records compaction events), do — but treat that as
