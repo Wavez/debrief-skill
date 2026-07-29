@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/Wavez/debrief-skill/compare/v1.5.0...v1.6.0) (2026-07-29)
+
+
+### Features
+
+* harden the report's disclosures, calibration, and edge-case handling ([e141c64](https://github.com/Wavez/debrief-skill/commit/e141c644e018c074efcfa864695b55da22fd537f))
+
 ## [1.5.0](https://github.com/Wavez/debrief-skill/compare/v1.4.1...v1.5.0) (2026-07-29)
 
 
