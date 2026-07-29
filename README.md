@@ -65,7 +65,8 @@ approve it**.
   - Regression check: cross-references findings against saved feedback/memory, so a repeated
     mistake reads as a regression, not a first-time miss. A rule that regresses even after
     already being documented can surface a **hook** suggestion instead of another memory note —
-    memory can only describe desired behavior, a hook can enforce it.
+    memory can only describe desired behavior, a hook can enforce it. Scoped to match where the
+    regressed rule lived: global if it came from global `CLAUDE.md`, project-only otherwise.
   - Missing tools or scripts: hand-writing the same logic twice in a session is itself flagged
     as a signal that a reusable script or skill asset is missing.
 
@@ -77,8 +78,8 @@ approve it**.
 > **Concrete issues**
 >
 > 🔴 **High (regression): Claimed the fix was "done" before running the test suite.**
-> - Already saved to memory after a near-identical incident last session — same mistake, not a
->   first-time miss.
+> - Already saved to project memory after a near-identical incident last session — same
+>   mistake, not a first-time miss.
 >
 > 🟡 **Medium: Asked whether the architecture was finalized while you were still listing
 > constraints.**
@@ -91,9 +92,10 @@ approve it**.
 > - Batched the four independent file edits into a single parallel tool call.
 >
 > **💡 Suggested improvements**
-> - **A hook** — the "claimed done before testing" rule was already in memory and got violated
->   anyway; a Stop hook that blocks claiming completion before test output is actually captured
->   would enforce it where the memory note didn't.
+> - **A project hook** (`.claude/settings.json`) — the "claimed done before testing" rule was
+>   already in *project* memory and got violated anyway; a Stop hook that blocks claiming
+>   completion before test output is actually captured would enforce it where the memory note
+>   didn't. Project-scoped, not global, since the rule itself was only ever project memory.
 > - **Global `CLAUDE.md`** — from the Medium finding above: wait for an explicit "done giving
 >   feedback" signal before asking the user to decide between options, even when the question
 >   itself is reasonable. General collaboration habit, not specific to this repo.
