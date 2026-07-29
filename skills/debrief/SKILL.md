@@ -15,11 +15,16 @@ Look back over the actual conversation in this session — the real sequence of 
 questions asked, decisions made, corrections or confirmations the user gave. Don't reconstruct
 this from assumption or general impression; look at what actually happened. If a CLAUDE.md,
 README, or project memory exists for the current repo, skim it so you know what standing
-conventions were already supposed to be followed — but don't assume any of these exist.
+conventions were already supposed to be followed — but don't assume any of these exist. If the
+session touched more than one repo or directory, check each one's own conventions rather than
+assuming a single "current repo" applies throughout.
 
 **Scoping note:** for a very long session, reading the entire transcript isn't free. Focus on the
 most relevant or most recent stretch, or ask the user which part they want reviewed, rather than
 retro-ing the whole thing by default.
+
+**Every finding in every section below must cite a specific, real moment from this session — no
+generic advice.** This governs the whole report, not just the sections where it's easy to satisfy.
 
 ## 1. Efficiency and token usage
 
@@ -31,8 +36,9 @@ retro-ing the whole thing by default.
   self-flagging — it produces visible failure output you'd naturally scan for. A step that
   succeeded 2+ times but hand-wrote near-identical logic each time (the same parsing script,
   the same multi-part check, the same query shape) leaves no error signal, so it won't surface
-  by scanning for failures. Find it by comparing tool-call bodies against earlier calls in the
-  same session, not by looking for what broke.
+  by scanning for failures. The mechanical signal: 3+ tool calls with the same tool name and
+  near-identical parameters in the same session — that's the finding, without needing to diff
+  every call by hand.
 - Was work batched appropriately, or did back-and-forth trickle in one item at a time when it
   could have been gathered first?
 - Two-sided: where should a subagent, fork, or parallel tool call have been used but wasn't -
@@ -43,7 +49,9 @@ retro-ing the whole thing by default.
   sources fetched twice, the same survey compiled twice — because neither was handed the
   other's output? A dispatch that was correct to make in isolation can still waste a whole
   context window by duplicating its sibling. Read the dispatch prompts against each other —
-  they're short and sit close together — rather than diffing everything the agents returned.
+  they're short and sit close together — rather than diffing everything the agents returned. If
+  a sibling's raw output didn't survive context compaction or summarization, say so and skip the
+  comparison rather than assuming no duplication occurred.
 - **Rework at a context seam:** if this session's context was summarized or compacted partway
   through, the compaction itself is not the finding — long sessions compact, and that is the
   system working as designed. What matters is whether anything had to be re-established
@@ -86,7 +94,9 @@ retro-ing the whole thing by default.
 - **Regression check:** cross-check each finding above against your existing memory (feedback
   -type entries in particular). A finding that repeats a mistake already corrected once before is
   a more serious regression than a first-time miss — flag it as such, don't let it read the same
-  as a novel issue.
+  as a novel issue. If no memory system or feedback-type entries are accessible in this
+  environment, say so and skip this check rather than assuming none of the findings are
+  regressions.
 - Is there a missing tool, script, or piece of documentation that would have made this session
   faster? **This is a required check, not an optional one:** count how many times this session
   hand-wrote near-identical logic inline (see the repetition check in section 1). Two or more
@@ -95,20 +105,29 @@ retro-ing the whole thing by default.
 
 ## Output format
 
-Structure the report as four headed sections, in this order:
+Structure the report as four headed sections, in this order. Sections 1–3 above feed Concrete
+issues; section 4 feeds Suggested improvements; What went well draws from anything positive
+noticed while working through sections 1–3.
 
 ### Overall assessment
-One or two sentences, direct.
+One or two sentences, direct. If section 0's scoping note applied — you reviewed only part of
+the session rather than all of it — say so here (e.g. "reviewing only the last N exchanges") so
+the reader knows what this report does and doesn't cover.
 
 ### Concrete issues
-Each grounded in a specific real moment from this session (not a hypothetical), prefixed with
-both a severity marker and label so a real process failure doesn't read the same as a minor
-nitpick: `🔴 High:` for wasted work, wasted tokens, or a claim that risked being acted on while
-wrong; `🟡 Medium:` for a noticeable inefficiency or collaboration slip that cost real time;
-`🟢 Low:` for polish worth naming once and not repeating. State the observable behavior and its
-impact, not intent or blame (e.g. "used X, causing Y" rather than "violated the rule by doing
-X"). When a finding rests on multiple pieces of evidence, list them as short sub-bullets instead
-of one long sentence.
+List most severe first. Each grounded in a specific real moment from this session (not a
+hypothetical), prefixed with both a severity marker and label so a real process failure doesn't
+read the same as a minor nitpick: `🔴 High:` for wasted work, wasted tokens, or a claim that
+risked being acted on while wrong; `🟡 Medium:` for a noticeable inefficiency or collaboration
+slip that cost real time; `🟢 Low:` for polish worth naming once and not repeating. A finding
+that matches more than one criterion (e.g. both an unverified claim and a repeat of a documented
+regression) escalates to the higher of the two tiers, not the first one identified. State the
+observable behavior and its impact, not intent or blame (e.g. "used X, causing Y" rather than
+"violated the rule by doing X"). When a finding rests on multiple pieces of evidence, list them
+as short sub-bullets instead of one long sentence. Calibrate rather than defaulting to the middle
+tier: most clean sessions should have zero or one 🔴, reserved for genuine wasted work or a wrong
+claim that could have shipped — don't inflate routine inefficiency upward, and don't downgrade a
+real regression to look safe.
 
 ### What went well
 What's worth repeating, stated briefly — what happened and why it mattered, not a narrative.
@@ -122,7 +141,6 @@ destinations and how to choose between them.
 
 ## Rules
 
-- Every finding must cite a specific, real moment from this session — no generic advice.
 - Don't manufacture criticism to fill out every section; if a section has nothing real, say so
   briefly and move on.
 - This skill produces a report, not automatic changes. Stop after presenting it — only save a
