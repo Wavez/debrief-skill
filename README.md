@@ -76,7 +76,9 @@ approve it**.
 >
 > **Concrete issues**
 >
-> 🔴 **High: Claimed the fix was "done" before running the test suite.**
+> 🔴 **High (regression): Claimed the fix was "done" before running the test suite.**
+> - Already saved to memory after a near-identical incident last session — same mistake, not a
+>   first-time miss.
 >
 > 🟡 **Medium: Asked whether the architecture was finalized while you were still listing
 > constraints.**
@@ -89,8 +91,9 @@ approve it**.
 > - Batched the four independent file edits into a single parallel tool call.
 >
 > **💡 Suggested improvements**
-> - **Project memory** — record the "claimed done before testing" incident (the High finding
->   above), so a repeat of it next session reads as a regression, not a first-time miss.
+> - **A hook** — the "claimed done before testing" rule was already in memory and got violated
+>   anyway; a Stop hook that blocks claiming completion before test output is actually captured
+>   would enforce it where the memory note didn't.
 > - **Global `CLAUDE.md`** — from the Medium finding above: wait for an explicit "done giving
 >   feedback" signal before asking the user to decide between options, even when the question
 >   itself is reasonable. General collaboration habit, not specific to this repo.
