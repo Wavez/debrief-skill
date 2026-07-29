@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/Wavez/debrief-skill/compare/v1.6.0...v1.6.1) (2026-07-29)
+
+
+### Bug Fixes
+
+* tighten debrief's edge-case guidance and scoping rules ([2b2d68b](https://github.com/Wavez/debrief-skill/commit/2b2d68b8953313b4849ef5884ebc18250ba3a374))
+
 ## [1.6.0](https://github.com/Wavez/debrief-skill/compare/v1.5.0...v1.6.0) (2026-07-29)
 
 
