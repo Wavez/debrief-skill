@@ -63,7 +63,9 @@ approve it**.
 - **Follow-through for next time**
   - What's worth saving from this session so it doesn't need to be re-learned next time.
   - Regression check: cross-references findings against saved feedback/memory, so a repeated
-    mistake reads as a regression, not a first-time miss.
+    mistake reads as a regression, not a first-time miss. A rule that regresses even after
+    already being documented can surface a **hook** suggestion instead of another memory note —
+    memory can only describe desired behavior, a hook can enforce it.
   - Missing tools or scripts: hand-writing the same logic twice in a session is itself flagged
     as a signal that a reusable script or skill asset is missing.
 
