@@ -6,8 +6,8 @@
 <br><br>
 
 [![Claude Code](https://badgen.net/badge/Claude%20Code/Skill/blue?icon=claude)](https://claude.ai/code)
-[![Version](https://badgen.net/github/release/Wavez/debrief-skill?ref=dbc1f1a9d8dcf171d1091357064ba2fe4835a701)](https://github.com/Wavez/debrief-skill/releases)
-[![License: MIT](https://badgen.net/github/license/Wavez/debrief-skill?color=green&ref=dbc1f1a9d8dcf171d1091357064ba2fe4835a701)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
+[![Version](https://badgen.net/github/release/Wavez/debrief-skill?ref=ba2ec7a00dc0ff0e2bb9aaefa063d16f0935b8e9)](https://github.com/Wavez/debrief-skill/releases)
+[![License: MIT](https://badgen.net/github/license/Wavez/debrief-skill?color=green&ref=ba2ec7a00dc0ff0e2bb9aaefa063d16f0935b8e9)](https://github.com/Wavez/debrief-skill/blob/main/LICENSE)
 
 **Catches the wasted tokens, mistimed questions, and repeated mistakes a code review can't
 see.** A single-file Claude Code skill for session retrospectives, with no scripts or
